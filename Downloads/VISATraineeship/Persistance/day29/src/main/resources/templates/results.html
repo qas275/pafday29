@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RESULTS</h1>
+    <ul data-th-each="c:${characters}">
+        <table border="solid">
+            <tr>
+                <td>NAME:</td>
+                <td th:text="${c.name}"></td>
+            </tr>
+            <tr>
+                <td>DESCRIPTION</td>
+                <td th:text="${c.description}"></td>
+            </tr>
+            <tr>
+                <td>PIC:</td>
+                <td><a th:href="${c.details}"><img th:src="${c.imgURL}" alt=""></a></td>
+            </tr>
+            <tr>
+                <td>ID:</td>
+                <td th:text="${c.id}"></td>
+            </tr>
+            <tr>
+                <td>MORE:</td>
+                <td><a th:href="${c.details}">CLICK TO VIEW MORE!</a></td>
+            </tr>
+        </table>
+    </ul>
+</body>
+</html>
